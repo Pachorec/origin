@@ -1,18 +1,19 @@
-<?php
-$comment = $_GET[‘comment’];
-echo $comment;
-?>
+
 <!DOCTYPE html>
-<html lang = “ja”>
+<html lang = "ja">
 <head>
-<meta charset = “UFT-8”>
-<title>フォームからデータを受け取る</title>
+<meta charset = "UFT-8">
+<title>メニュー画面</title>
 </head>
 <body>
-<h1>フォームデータの送信</h1>
-<form action = “index.php” method = “get”>
-<input type = “text” name =“comment/“><br/>
-<input type = “submit” value =“送信/“>
+<h2>入力</h2>
+<form action = "top.php" method = "post">
+<input type = "text" name ="comment"><br/>
+<input type = "submit" value ="検索">
 </form>
 </body>
 </html>
+<?php
+  $comment = @$_POST['comment'];
+  echo $comment;
+?>
